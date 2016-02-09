@@ -1,3 +1,10 @@
+// START HEROKU SETUP
+var express = require("express");
+var app = express();
+app.get('/', function(req, res){ res.send('And the bot keeps runnin, runnin and runnin runnin and'); });
+app.listen(process.env.PORT || 5000);
+// END HEROKU SETUP
+
 var TwitterPackage = require('twitter');
 
 var keys = require("./keys");
