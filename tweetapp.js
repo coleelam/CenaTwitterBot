@@ -1,23 +1,8 @@
-// START HEROKU SETUP
-var express = require("express");
-var app = express();
-app.get('/', function(req, res){ res.send('Bot is up!'); });
-app.listen(process.env.PORT || 5000);
-// END HEROKU SETUP
-
 var TwitterPackage = require('twitter');
 
-var config = {
-    me: 'cole_elam',
-    keys: {
-        consumer_key: process.env.TWITTER_CONSUMER_KEY,
-        consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-        access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
-        access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
-    },
-};
+var keys = require("./keys");
 
-var Twitter = new TwitterPackage(config);
+var Twitter = new TwitterPackage(keys);
 
 var cenaArray = [
     "Your time is up!",
@@ -51,6 +36,7 @@ var cenaArray = [
     "You see monetary status is not what matters, but it helps",
     "I rock a timepiece by Benny if any",
     "The same reason y'all could love me is the same reason y'all condemn me",
+    "The Champ is here!"
 ]
 
 Twitter.stream('statuses/filter', {track: '#cenafy'}, function(stream) {
@@ -61,7 +47,7 @@ Twitter.stream('statuses/filter', {track: '#cenafy'}, function(stream) {
 
         var randomIndex = Math.round(Math.random() * cenaArray.length);
 
-        var reply = "@" + tweet.user.screen_name + ", " + cenaArray[randomIndex];
+        var reply = "@" + tweet.user.screen_name + ", \"" + cenaArray[randomIndex] + "\" -@JohnCena";
 
         Twitter.post('statuses/update', {status: reply}, function(error, tweetReply, response) {
             if (error) {
