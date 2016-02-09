@@ -1,6 +1,24 @@
 {
-    "consumer_key": "T51vRxeyoD8R1rYbku4R5tGTW",
-    "consumer_secret": "OIFl26NhxHAZ1FqSNL7EQlRYtJZZfYE2lv73rLtYTa3feu3MhW",
-    "access_token_key": "499395323-34G5McjYaYz4RWnGouFtbSUjVOTiP3PCSbvdLVdH",
-    "access_token_secret": "OWNGb5qqRKitn7opiDqqvclQxtzdLhjgQS6rsrIOhhcJn"
+  "consumer_key": "T51vRxeyoD8R1rYbku4R5tGTW",
+  "consumer_secret": "OIFl26NhxHAZ1FqSNL7EQlRYtJZZfYE2lv73rLtYTa3feu3MhW",
+  "access_token_key": "499395323-34G5McjYaYz4RWnGouFtbSUjVOTiP3PCSbvdLVdH",
+  "access_token_secret": "OWNGb5qqRKitn7opiDqqvclQxtzdLhjgQS6rsrIOhhcJn",
+  "name": "CenaTwitterBot",
+  "description": "Tweet responds to #cenafy",
+  "version": "1.0.0",
+  "main": "tweetapp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coleelam/CenaTwitterBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coleelam/CenaTwitterBot/issues"
+  },
+  "homepage": "https://github.com/coleelam/CenaTwitterBot#readme"
 }
