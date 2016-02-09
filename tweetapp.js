@@ -5,14 +5,15 @@ app.get('/', function(req, res){ res.send('Bot is up!'); });
 app.listen(process.env.PORT || 5000);
 // END HEROKU SETUP
 
-var config = {
-    consumer_key: process.env.TWITTER_CONSUMER_KEY,
-    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-    access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
-    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
-};
+var TwitterPackage = require('twitter');
 
-var Twitter = require('twitter')(config);
+var Twitter = new TwitterPackage({
+    me: 'cole_elam',
+    consumer_key: 'T51vRxeyoD8R1rYbku4R5tGTW',
+    consumer_secret: 'OIFl26NhxHAZ1FqSNL7EQlRYtJZZfYE2lv73rLtYTa3feu3MhW',
+    access_token_key: '499395323-34G5McjYaYz4RWnGouFtbSUjVOTiP3PCSbvdLVdH',
+    access_token_secret: 'OWNGb5qqRKitn7opiDqqvclQxtzdLhjgQS6rsrIOhhcJn'
+});
 
 var cenaArray = [
     "Your time is up!",
