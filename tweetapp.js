@@ -1,6 +1,6 @@
 var TwitterPackage = require('twitter');
 
-var keys = require("./keys")
+var keys = require("./package")
 
 var Twitter = new TwitterPackage(keys);
 
