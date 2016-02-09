@@ -5,6 +5,8 @@ app.get('/', function(req, res){ res.send('Bot is up!'); });
 app.listen(process.env.PORT || 5000);
 // END HEROKU SETUP
 
+var TwitterPackage = require('twitter');
+
 var config = {
     me: 'cole_elam',
     keys: {
@@ -15,7 +17,7 @@ var config = {
     },
 };
 
-var Twitter = require('twitter')(config.keys);
+var Twitter = new TwitterPackage(config);
 
 var cenaArray = [
     "Your time is up!",
