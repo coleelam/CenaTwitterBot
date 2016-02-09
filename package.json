@@ -17,7 +17,7 @@
     "url": "https://github.com/coleelam/CenaTwitterBot/issues"
   },
   "dependencies": {
-    "tuiter": "~0.2.12",
+    "twitter": "~0.2.13",
     "express": "~4.9.0"
 },
   "homepage": "https://github.com/coleelam/CenaTwitterBot#readme"
